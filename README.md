@@ -6,7 +6,7 @@ Welcome to the API Documentation for Syngenta Start Global 2025 Hackathon! This 
 
 ### CE Hub
 
-- **`api/`**: Contains a document with specifications on how to use CE Hub's API and a Postman collection with examples of requests.
+- **`api/`**: Contains a documents such as help document, video, postman collections with specifications on how to use CE Hub's API with examples of requests.
 - **`Model card/`**: Contains a document with specifications on various weather-based alogirthms.
 - **`Product card/`**: Contains a document with specifications on various products offered by Syngenta.
 - **`UI resources/`**: Contains a document with specifications on branding and styles of the Syngenta. 
