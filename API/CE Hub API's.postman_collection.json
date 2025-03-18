@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "89488c10-e2d7-4c84-bcda-9bc9b585d3b3",
+		"name": "CE Hub API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19470993"
+	},
+	"item": [
+		{
+			"name": "Forecast Daily",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "ApiKey",
+						"value": "{{Forecast Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://services.cehub.syngenta-ais.com/api/Forecast/ShortRangeForecastDaily?format=json&supplier={{Weather source}}&startDate=2025-03-20&endDate=2025-03-23&measureLabel=TempAir_DailyAvg%20(C);TempAir_DailyMax%20(C);TempAir_DailyMin%20(C);Precip_DailySum%20(mm);WindDirection_DailyAvg%20(Deg);WindSpeed_DailyAvg%20(m/s);HumidityRel_DailyAvg%20(pct);WindDirection_DailyAvg;Soilmoisture_0to10cm_DailyAvg%20(vol%25);WindGust_DailyMax%20(m/s);Referenceevapotranspiration_DailySum%20(mm);TempSurface_DailyAvg%20(C);Soiltemperature_0to10cm_DailyAvg%20(C)&latitude=47&longitude=7",
+					"protocol": "https",
+					"host": [
+						"services",
+						"cehub",
+						"syngenta-ais",
+						"com"
+					],
+					"path": [
+						"api",
+						"Forecast",
+						"ShortRangeForecastDaily"
+					],
+					"query": [
+						{
+							"key": "wkt",
+							"value": "POINT(7 47)",
+							"description": "Location information in well known text format",
+							"disabled": true
+						},
+						{
+							"key": "top",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "format",
+							"value": "json"
+						},
+						{
+							"key": "supplier",
+							"value": "{{Weather source}}",
+							"description": "Default weather provider"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-03-20",
+							"description": "Start date in the format YYYY-MM-DD"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-03-23",
+							"description": "End date in the format YYYY-MM-DD"
+						},
+						{
+							"key": "measureLabel",
+							"value": "TempAir_DailyAvg%20(C);TempAir_DailyMax%20(C);TempAir_DailyMin%20(C);Precip_DailySum%20(mm);WindDirection_DailyAvg%20(Deg);WindSpeed_DailyAvg%20(m/s);HumidityRel_DailyAvg%20(pct);WindDirection_DailyAvg;Soilmoisture_0to10cm_DailyAvg%20(vol%25);WindGust_DailyMax%20(m/s);Referenceevapotranspiration_DailySum%20(mm);TempSurface_DailyAvg%20(C);Soiltemperature_0to10cm_DailyAvg%20(C)",
+							"description": "Measure Label i.e. weather parameters in comma separtor"
+						},
+						{
+							"key": "latitude",
+							"value": "47"
+						},
+						{
+							"key": "longitude",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forecast Hourly",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "ApiKey",
+						"value": "{{Forecast Token}}"
+					}
+				],
+				"url": {
+					"raw": "https://services.cehub.syngenta-ais.com/api/Forecast/ShortRangeForecastHourly?latitude=47&longitude=7&startDate=2025-03-20&endDate=2025-03-23&supplier={{Weather source}}&measureLabel=Precip_HourlySum%20%28mm%29%3BPrecipProbability_Hourly%20%28pct%29%3BShowerProbability_Hourly%20%28pct%29%3BSnowFraction_Hourly%3BSunshineDuration_Hourly%20%28min%29%3BTempAir_Hourly%20%28C%29%3BVisibility_Hourly%20%28m%29%3BWindDirection_Hourly%20%28Deg%29%3BWindGust_Hourly%20%28m%2Fs%29%09%3BWindSpeed_Hourly%20%28m%2Fs%29%3BSoilmoisture_0to10cm_Hourly%20%28vol%25%29%3BSoiltemperature_0to10cm_Hourly%20%28C%29&format=json",
+					"protocol": "https",
+					"host": [
+						"services",
+						"cehub",
+						"syngenta-ais",
+						"com"
+					],
+					"path": [
+						"api",
+						"Forecast",
+						"ShortRangeForecastHourly"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "47"
+						},
+						{
+							"key": "longitude",
+							"value": "7"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-03-20",
+							"description": "Start date in the format YYYY-MM-DD"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-03-23",
+							"description": "End date in the format YYYY-MM-DD"
+						},
+						{
+							"key": "supplier",
+							"value": "{{Weather source}}",
+							"description": "Default weather provider"
+						},
+						{
+							"key": "measureLabel",
+							"value": "Precip_HourlySum%20%28mm%29%3BPrecipProbability_Hourly%20%28pct%29%3BShowerProbability_Hourly%20%28pct%29%3BSnowFraction_Hourly%3BSunshineDuration_Hourly%20%28min%29%3BTempAir_Hourly%20%28C%29%3BVisibility_Hourly%20%28m%29%3BWindDirection_Hourly%20%28Deg%29%3BWindGust_Hourly%20%28m%2Fs%29%09%3BWindSpeed_Hourly%20%28m%2Fs%29%3BSoilmoisture_0to10cm_Hourly%20%28vol%25%29%3BSoiltemperature_0to10cm_Hourly%20%28C%29",
+							"description": "Measure Label i.e. weather parameters in comma separtor"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						},
+						{
+							"key": "wkt",
+							"value": "POINT(7 47)",
+							"description": "Location information in well known text format",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forecast Nowcast",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "ApiKey",
+						"value": "{{Forecast Token}}"
+					}
+				],
+				"url": {
+					"raw": "https://services.cehub.syngenta-ais.com/api/Forecast/Nowcast?latitude=47&longitude=7&startDate=2025-03-20&endDate=2025-03-21&supplier={{Weather source}}&measureLabel=Temperature_15Min%20%28C%29%3BWindSpeed_15Min%20%28m%2Fs%29%3BWindDirection_15Min%3BHumidityRel_15Min%20%28pct%29&format=json",
+					"protocol": "https",
+					"host": [
+						"services",
+						"cehub",
+						"syngenta-ais",
+						"com"
+					],
+					"path": [
+						"api",
+						"Forecast",
+						"Nowcast"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "47"
+						},
+						{
+							"key": "longitude",
+							"value": "7"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-03-20"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-03-21"
+						},
+						{
+							"key": "supplier",
+							"value": "{{Weather source}}"
+						},
+						{
+							"key": "measureLabel",
+							"value": "Temperature_15Min%20%28C%29%3BWindSpeed_15Min%20%28m%2Fs%29%3BWindDirection_15Min%3BHumidityRel_15Min%20%28pct%29"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Historical Daily",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"units\": {\r\n        \"temperature\": \"C\",\r\n        \"velocity\": \"km/h\",\r\n        \"length\": \"metric\",\r\n        \"energy\": \"watts\"\r\n    },\r\n    \"geometry\": {\r\n        \"type\": \"MultiPoint\",\r\n        \"coordinates\": [\r\n            [\r\n                7.57327,\r\n                47.558399,\r\n                279\r\n            ]\r\n        ],\r\n        \"locationNames\": [\r\n            \"Basel\"\r\n        ],\r\n        \"mode\": \"preferLandWithMatchingElevation\"\r\n    },\r\n    \"format\": \"json\",\r\n    \"timeIntervals\": [\r\n        \"2023-01-01T+01:00/2024-03-19T+01:00\"\r\n    ],\r\n    \"timeIntervalsAlignment\": \"none\",\r\n    \"queries\": [\r\n        {\r\n            \"domain\": \"ERA5T\",\r\n            \"gapFillDomain\": \"NEMSGLOBAL\",\r\n            \"timeResolution\": \"daily\",\r\n            \"codes\": [\r\n                {\r\n                    \"code\": 11,\r\n                    \"level\": \"2 m above gnd\",\r\n                    \"aggregation\": \"mean\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"domain\": \"ERA5T\",\r\n            \"gapFillDomain\": \"NEMSGLOBAL\",\r\n            \"timeResolution\": \"daily\",\r\n            \"codes\": [\r\n                {\r\n                    \"code\": 61,\r\n                    \"level\": \"sfc\",\r\n                    \"aggregation\": \"sum\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"domain\": \"ERA5T\",\r\n            \"gapFillDomain\": \"NEMSGLOBAL\",\r\n            \"timeResolution\": \"daily\",\r\n            \"codes\": [\r\n                {\r\n                    \"code\": 52,\r\n                    \"level\": \"2 m above gnd\",\r\n                    \"aggregation\": \"mean\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"domain\": \"ERA5T\",\r\n            \"gapFillDomain\": \"NEMSGLOBAL\",\r\n            \"timeResolution\": \"daily\",\r\n            \"codes\": [\r\n                {\r\n                    \"code\": 261,\r\n                    \"level\": \"sfc\",\r\n                    \"aggregation\": \"sum\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"domain\": \"ERA5T\",\r\n            \"gapFillDomain\": \"NEMSGLOBAL\",\r\n            \"timeResolution\": \"daily\",\r\n            \"codes\": [\r\n                {\r\n                    \"code\": 32,\r\n                    \"level\": \"10 m above gnd\",\r\n                    \"aggregation\": \"mean\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://my.meteoblue.com/dataset/query?apikey={{Historical Token}}",
+					"protocol": "http",
+					"host": [
+						"my",
+						"meteoblue",
+						"com"
+					],
+					"path": [
+						"dataset",
+						"query"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{Historical Token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Historical Hourly",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"units\": {\r\n        \"temperature\": \"C\",\r\n        \"velocity\": \"km/h\",\r\n        \"length\": \"metric\",\r\n        \"energy\": \"watts\"\r\n    },\r\n    \"geometry\": {\r\n        \"type\": \"MultiPoint\",\r\n        \"coordinates\": [\r\n            [\r\n                7.57327,\r\n                47.558399,\r\n                279\r\n            ]\r\n        ],\r\n        \"locationNames\": [\r\n            \"Basel\"\r\n        ],\r\n        \"mode\": \"preferLandWithMatchingElevation\"\r\n    },\r\n    \"format\": \"json\",\r\n    \"timeIntervals\": [\r\n        \"2024-03-12T+01:00/2024-03-19T+01:00\"\r\n    ],\r\n    \"timeIntervalsAlignment\": \"none\",\r\n    \"queries\": [\r\n        {\r\n            \"domain\": \"ERA5T\",\r\n            \"gapFillDomain\": \"NEMSGLOBAL\",\r\n            \"timeResolution\": \"hourly\",\r\n            \"codes\": [\r\n                {\r\n                    \"code\": 11,\r\n                    \"level\": \"2 m above gnd\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"domain\": \"ERA5T\",\r\n            \"gapFillDomain\": \"NEMSGLOBAL\",\r\n            \"timeResolution\": \"hourly\",\r\n            \"codes\": [\r\n                {\r\n                    \"code\": 61,\r\n                    \"level\": \"sfc\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"domain\": \"ERA5T\",\r\n            \"gapFillDomain\": \"NEMSGLOBAL\",\r\n            \"timeResolution\": \"hourly\",\r\n            \"codes\": [\r\n                {\r\n                    \"code\": 52,\r\n                    \"level\": \"2 m above gnd\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"domain\": \"ERA5T\",\r\n            \"gapFillDomain\": \"NEMSGLOBAL\",\r\n            \"timeResolution\": \"hourly\",\r\n            \"codes\": [\r\n                {\r\n                    \"code\": 261,\r\n                    \"level\": \"sfc\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"domain\": \"ERA5T\",\r\n            \"gapFillDomain\": \"NEMSGLOBAL\",\r\n            \"timeResolution\": \"hourly\",\r\n            \"codes\": [\r\n                {\r\n                    \"code\": 32,\r\n                    \"level\": \"10 m above gnd\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://my.meteoblue.com/dataset/query?apikey={{Historical Token}}",
+					"protocol": "http",
+					"host": [
+						"my",
+						"meteoblue",
+						"com"
+					],
+					"path": [
+						"dataset",
+						"query"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{Historical Token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soil",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"units\":{\"temperature\":\"C\",\"velocity\":\"km/h\",\"length\":\"metric\",\"energy\":\"watts\"},\"geometry\":{\"type\":\"MultiPoint\",\"coordinates\":[[7.57327,47.558399,279]],\"locationNames\":[\"Basel\"],\"mode\":\"preferLandWithMatchingElevation\"},\"format\":\"json\",\"timeIntervals\":[\"2024-03-12T+01:00/2024-03-19T+01:00\"],\"timeIntervalsAlignment\":\"none\",\"queries\":[{\"domain\":\"SOILGRIDS1000\",\"gapFillDomain\":null,\"timeResolution\":\"static\",\"codes\":[{\"code\":812,\"level\":\"5 cm\"}]},{\"domain\":\"SOILGRIDS1000\",\"gapFillDomain\":null,\"timeResolution\":\"static\",\"codes\":[{\"code\":806,\"level\":\"0 cm\"}]},{\"domain\":\"WISE30\",\"gapFillDomain\":null,\"timeResolution\":\"static\",\"codes\":[{\"code\":831,\"level\":\"0-20 cm\"}]}]}"
+				},
+				"url": {
+					"raw": "http://my.meteoblue.com/dataset/query?apikey={{Historical Token}}",
+					"protocol": "http",
+					"host": [
+						"my",
+						"meteoblue",
+						"com"
+					],
+					"path": [
+						"dataset",
+						"query"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{Historical Token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Forecast Token",
+			"value": "d4f087c7-7efc-41b4-9292-0f22b6199215"
+		},
+		{
+			"key": "Weather source",
+			"value": "Meteoblue"
+		},
+		{
+			"key": "Historical Token",
+			"value": "7b29a207a0de"
+		}
+	]
+}
