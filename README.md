@@ -2,7 +2,7 @@
 
 ## Project Guide
 
-Welcome to the API Documentation for Syngenta and CE Hub's Start Global 2025 Hackathon! This repository serves as a centralized hub for accessing the API documentation of  CE Hub's official API documentation. Additionally, it serves as a resource file for accessing the product and algorithms API.
+Welcome to the API Documentation for Syngenta Start Global 2025 Hackathon! This repository serves as a centralized hub for accessing the API documentation of  CE Hub's official API documentation. Additionally, it serves as a resource file for accessing the product and algorithms cards and UI styles.
 
 ### CE Hub
 
